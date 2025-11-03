@@ -6,8 +6,7 @@ const nodes = [
   { key: "about", icon: <FaUser />, label: "About" },
   { key: "skills", icon: <FaBrain />, label: "Skills" },
   { key: "projects", icon: <FaProjectDiagram />, label: "Projects" },
-  { key: "contact", icon: <FaEnvelope />, label: "Contact" },
-  { key: "developer", icon: <FaCode />, label: "MERN Developer" },
+  { key: "contact", icon: <FaEnvelope />, label: "Contact" }
 ];
 
 function NodeMap({ setActivePage }) {
@@ -25,8 +24,8 @@ function NodeMap({ setActivePage }) {
         safe = true;
         existingPositions.forEach((pos) => {
           if (
-            Math.abs(pos.top - top) < 15 && // increase min distance to prevent overlap
-            Math.abs(pos.left - left) < 15
+            Math.abs(pos.top - top) < 10 && // increase min distance to prevent overlap
+            Math.abs(pos.left - left) < 10
           ) {
             safe = false;
           }

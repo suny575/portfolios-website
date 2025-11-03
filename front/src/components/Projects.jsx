@@ -1,36 +1,88 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../styles/Projects.css';
-import { FaGithub } from 'react-icons/fa';
-import API from '../utils/api';
+import { FaGithub, FaArrowDown } from 'react-icons/fa';
+
+const projectsData = [
+   {
+    name: 'Portfolio Website',
+    description: 'My personal portfolio with interactive nodes, skills showcase, and projects.',
+    tools: 'React, CSS, Bootstrap',
+    duration: '4 weeks',
+    link: '#',
+  },
+  {
+    name: 'Background Remover',
+    description: 'A smart tool that removes image backgrounds automatically using AI techniques.',
+    tools: 'React, HTML, CSS, AI API',
+    duration: '2 weeks',
+    link: '#',
+  },
+  {
+    name: 'Drag & Drop App',
+    description: 'Interactive drag and drop interface to organize items visually.',
+    tools: 'React, HTML, CSS, JavaScript',
+    duration: '1 week',
+    link: '#',
+  },
+  {
+    name: 'Movie Site',
+    description: 'A fun movie browsing site showing trending movies with trailers and ratings.',
+    tools: 'React, TMDB API, CSS',
+    duration: '3 weeks',
+    link: '#',
+  },
+  {
+    name: "Task Manager App",
+    description: "A full-stack MERN app to manage daily tasks efficiently with user-friendly interface.",
+    tools: "MongoDB, Express, React, Node.js",
+    duration: "1 month",
+    link: "https://github.com/suny575/task-manager"
+  },
+
+  {
+    name: "Chat App",
+    description: "A real-time chat application using websockets for seamless instant messaging.",
+    tools: "React, Node.js, Socket.IO",
+    duration: "3 weeks",
+    link: "https://github.com/suny575/chat-app"
+  },
+];
 
 function Projects() {
-  const [projects, setProjects] = useState([]);
+  const [expanded, setExpanded] = useState(null);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const res = await API.get('/projects');
-        setProjects(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchProjects();
-  }, []);
+  const toggleDetails = (index) => {
+    setExpanded(expanded === index ? null : index);
+  };
 
   return (
     <div className="projects-section">
-      <h2>My Projects</h2>
+      <h2 className="projects-title">My Projects 💜</h2>
+       <p className="projects-intro">
+        Throughout my journey as a 4th-year Computer Science student, I’ve explored, learned, 
+        and built amazing things. Here are some of the projects that reflect my growth, creativity, and problem-solving skills.
+      </p>
+      <div className="floating-arrow">⬇️</div>
       <div className="projects-grid">
-        {projects.length > 0 ? projects.map((project, idx) => (
+        {projectsData.map((project, idx) => (
           <div className="project-card" key={idx}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            {project.link && <a href={project.link} target="_blank" rel="noreferrer">
-              <FaGithub size={25} /> View
-            </a>}
+            <h3 className="project-name">{project.name}</h3>
+            <div className="project-short" onClick={() => toggleDetails(idx)}>
+              <FaArrowDown className='pointerD' /> Explore
+            </div>
+
+            {expanded === idx && (
+              <div className="project-details">
+                <p>📝 {project.description}</p>
+                <p>🛠️ Tools: {project.tools}</p>
+                <p>⏳ Duration: {project.duration}</p>
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  <FaGithub /> View Project
+                </a>
+              </div>
+            )}
           </div>
-        )) : <p>Loading projects...</p>}
+        ))}
       </div>
     </div>
   );

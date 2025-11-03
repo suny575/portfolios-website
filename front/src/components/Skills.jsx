@@ -4,8 +4,8 @@ import { FaReact, FaNodeJs, FaDatabase, FaJs, FaHtml5, FaCss3Alt } from 'react-i
 
 const skills = [
   { key: 'html', icon: <FaHtml5 />, label: 'HTML5', highlight: '📄 Semantic Markup' },
-  { key: 'react', icon: <FaReact />, label: 'React', highlight: '💙 Interactive UI' },
   { key: 'css', icon: <FaCss3Alt />, label: 'CSS3', highlight: '🎨 Stylish Layouts' },
+  { key: 'react', icon: <FaReact />, label: 'React', highlight: '💙 Interactive UI' },
   { key: 'mongo', icon: <FaDatabase />, label: 'MongoDB', highlight: '🗄️ Data Wizard' },
   { key: 'js', icon: <FaJs />, label: 'JavaScript', highlight: '✨ Clean Code' },
   { key: 'express', icon: <FaNodeJs />, label: 'Express', highlight: '🚀 Lightweight Server' },
