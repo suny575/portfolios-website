@@ -1,0 +1,171 @@
+.section-container {
+  padding-top: 80px;
+}
+
+.skills-section {
+  max-width: 900px; /* limits the width of the section */
+  margin: 80px auto; /* centers it horizontally and gives top/bottom spacing */
+  padding: 35px;
+  text-align: center;
+  background: rgba(225, 214, 214, 0.9);
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  opacity: 1.5;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.skills-intro {
+  font-size: 1rem;
+  color: #6a1b9a;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center; /* centers items in each row */
+  align-items: center; /* keeps items vertically aligned */
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center; /* centers items in each row */
+  align-items: center; /* vertically aligns items if they wrap unevenly */
+}
+
+.skills-title {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #6a1b9a;
+  text-align: center;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, #f4e1d2, #fce4ec);
+  border-radius: 35px 60px 35px 60px; /* smooth, pill-like */
+  padding: 15px 20px;
+  width: 180px;
+  display: inline-block;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* soft glowing hover effect */
+.skill-item:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 8px 25px rgba(106, 27, 154, 0.5); /* glow */
+  background: linear-gradient(135deg, #e1bee7, #ce93d8);
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  border-radius: 50%;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* icon & label hover color shift */
+.skill-item:hover .skill-icon {
+  color: #ab47bc;
+}
+
+.skill-item:hover .skill-label {
+  color: #8e24aa;
+}
+
+.skill-highlight {
+  font-size: 0.85rem;
+  color: #8e24aa;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+  text-align: center;
+}
+
+.skill-item:hover .skill-highlight {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* pulse animation for breathing effect */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(106, 27, 154, 0.35);
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.2);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* fade-up for highlights */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-cta {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #6a1b9a;
+  font-family: "Pacifico", cursive;
+}
+
+.skills-cta span {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills-cta span:hover {
+  color: #ab47bc;
+  transform: scale(1.1);
+}

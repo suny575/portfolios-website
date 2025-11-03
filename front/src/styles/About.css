@@ -1,0 +1,59 @@
+
+.section-container {
+  padding-top: 80px; 
+}
+
+
+.about-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  transition: all 0.6s ease;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.about-section.fade-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.about-title {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+}
+
+.about-skills {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3e5f5;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  color: #6a1b9a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}

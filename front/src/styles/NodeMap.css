@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+.node-map {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+
+  background: radial-gradient(
+    circle at center,
+    #f3e8ff 0%,
+    #ede7f6 40%,
+    #f9f7fc 100%
+  );
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.node {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.node:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+.icon {
+  font-size: 1.8rem; /* smaller size */
+  color: white;
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 0 18px rgba(167, 8, 236, 0.904);
+  transition: box-shadow 0.4s ease;
+}
+
+.node:hover .icon {
+  box-shadow: 0 0 25px rgba(155, 89, 182, 0.6);
+}
+
+.label {
+  font-family: "Shadows Into Light", cursive;
+  color: #000;
+  font-size: 1.15rem;
+  margin-top: 6px;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Smooth float */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+   75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Page fade-in when loaded */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

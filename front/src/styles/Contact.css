@@ -1,0 +1,143 @@
+.section-container {
+  padding-top: 80px; 
+}
+
+.contact-container {
+  display: flex;
+  color: #5a189a;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f3ff;
+  padding: 50px 20px;
+  gap: 30px;
+  border-radius: 15px;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-title {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2.2rem;
+  color: #5a189a;
+  margin-bottom: 30px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px; /* keeps everything compact */
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  margin-top: 15px;
+}
+
+.contact-info p {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+  font-size: 1rem;
+  gap:18px;
+}
+
+.contact-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #8e44ad;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.4);
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #5a189a;
+  transform: scale(1.05);
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+/* Bounce animation for icons */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.contact-info p svg {
+  animation: bounce 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.contact-info p:nth-child(1) svg {
+  animation-delay: 0s;
+}
+.contact-info p:nth-child(2) svg {
+  animation-delay: 0.3s;
+}
+.contact-info p:nth-child(3) svg {
+  animation-delay: 0.6s;
+}
