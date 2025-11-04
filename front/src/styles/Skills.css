@@ -1,10 +1,12 @@
 .section-container {
-  padding-top: 80px;
+  padding-top: 0;
+  margin-top: -15px;
 }
+
 
 .skills-section {
   max-width: 900px; /* limits the width of the section */
-  margin: 80px auto; /* centers it horizontally and gives top/bottom spacing */
+  margin: 30px auto; /* centers it horizontally and gives top/bottom spacing */
   padding: 35px;
   text-align: center;
   background: rgba(225, 214, 214, 0.9);

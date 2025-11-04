@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import "../styles/Contact.css";
+import BackButton from "../components/BackButton";
 
 function Contact({ setActivePage }) {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -34,12 +35,17 @@ function Contact({ setActivePage }) {
   };
 
   return (
+    <div className="section-container"> 
     <div
       className={`contact-container ${visible ? "fade-in" : "hidden"}`}
       ref={containerRef}
     >
       <h2 className="contact-title">Get in Touch 💜</h2>
-
+<div className="contact_p">.
+  <p>Feel Free to Contact me, Ask and Talk about <strong> projects </strong> let's build together,<br />
+   You can send me any <strong> feedback </strong>  or <strong> suggestion !.</strong>
+   <br /> <div className="tnx">Thanks❤️!</div> </p>
+</div>
       <div className="contact-content">
         <div className="contact-left">
           <div className="contact-info">
@@ -58,6 +64,8 @@ function Contact({ setActivePage }) {
             <p className="status">{status}</p>
           </form>
         </div>
+      </div>
+      <BackButton setActivePage={setActivePage} />
       </div>
     </div>
   );

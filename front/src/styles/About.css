@@ -1,4 +1,10 @@
+
+.section-container {
+  padding-top:  30px;
+  margin-top: 10px;
+}
 /* ABOUT SECTION */
+
 .about-section {
   display: flex;
   flex-direction: column; /* Top and More button stacked */
@@ -32,25 +38,48 @@
 }
 
 .about-image-container {
-  flex: 1;
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
+  flex: 1;
 }
 
 .about-image {
   width: 280px;
   height: 280px;
+  position: relative;
+  z-index: 2;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(155, 89, 182, 0.3);
+  box-shadow: 0 0 10px rgba(79, 2, 110, 0.3);
   transition: transform 0.6s ease, box-shadow 0.6s ease;
   animation: float 3s ease-in-out infinite;
 }
 
+.about-image-container:hover::before {
+  filter: blur(30px);
+  opacity: 1;
+}
+
 .about-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 45px rgba(155, 89, 182, 0.5);
+  box-shadow: 0 0 45px rgba(148, 6, 204, 0.5);
+}
+
+.about-image-container::before {
+  content: "";
+  position: absolute;
+  width: min(350px, 110%);
+  height: min(350px, 110%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #ab47bc, #7e57c2, #ce93d8, #ab47bc);
+  filter: blur(20px);
+  z-index: 1;
+  animation: spin 6s linear infinite;
+  opacity: 0.8;
 }
 
 /* Floating Icons around image */

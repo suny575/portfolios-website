@@ -1,3 +1,8 @@
+.section-container {
+  padding-top:  40px;
+  margin-top: 10px;
+}
+
 .projects-section {
   max-width: 900px;
   margin: 0 auto;

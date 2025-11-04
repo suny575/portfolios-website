@@ -19,16 +19,14 @@ function NodeMap({ setActivePage }) {
     const getRandomPosition = (existingPositions) => {
       let top, left, safe;
       do {
-        top = Math.random() * 70 + 10; // 10% - 80%
-        left = Math.random() * 70 + 10;
+        top = Math.random() * 60 + 20; // 20% - 80%
+        left = Math.random() * 60 + 20;
         safe = true;
         existingPositions.forEach((pos) => {
           if (
-            Math.abs(pos.top - top) < 10 && // increase min distance to prevent overlap
+            Math.abs(pos.top - top) < 10 &&
             Math.abs(pos.left - left) < 10
-          ) {
-            safe = false;
-          }
+          ) safe = false;
         });
       } while (!safe);
       return { top: `${top}%`, left: `${left}%` };
@@ -44,13 +42,16 @@ function NodeMap({ setActivePage }) {
   }, []);
 
   return (
-    <div className="node-map">
-      {nodes.map((node) => (
+    <div className="node-map-container">
+      {nodes.map((node, index) => (
         <div
           key={node.key}
           className="node"
-          style={positions[node.key] || {}}
-          onClick={() => setActivePage(node.key)} // ✅ fixed
+          style={{
+            ...positions[node.key],
+            animationDelay: `${index * 0.3}s`
+          }}
+          onClick={() => setActivePage(node.key)}
         >
           <div className="icon">{node.icon}</div>
           <div className="label">{node.label}</div>

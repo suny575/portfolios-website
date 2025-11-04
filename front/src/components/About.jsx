@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'; 
 import '../styles/About.css';
 import { FaLaptopCode, FaLightbulb, FaPalette, FaReact, FaNodeJs, FaDatabase, FaBook, FaMusic, FaStar, FaGraduationCap, FaLaptop } from 'react-icons/fa';
+import BackButton from "../components/BackButton";
 
 function About({ setActivePage }) {
   const containerRef = useRef(null);
@@ -51,10 +52,13 @@ function About({ setActivePage }) {
 
   return (
     <div className={`about-section ${visible ? 'fade-in' : 'hidden'}`} ref={containerRef}>
+      <div>
+         <h1 className="about-title">About Me 💜</h1>
+      </div>
       {/* TOP IMAGE + TEXT */}
-      <div className="about-content">
+      <div className="about-content section-container">
         <div className="about-image-container">
-          <img src="/me.jpg" className="about-image" />
+          <img src="/me.png" className="about-image" />
           <FaLaptopCode className="floating-icon icon1"/>
           <FaPalette className="floating-icon icon2"/>
           <FaLightbulb className="floating-icon icon3"/>
@@ -62,7 +66,7 @@ function About({ setActivePage }) {
         </div>
 
         <div className="about-text">
-          <h2 className="about-title">About Me 💜</h2>
+          <h3 className="about-title">Who I'am ?</h3>
           <p>
             Hello! I’m <strong>Tsehayinesh Belete</strong>, a passionate 4th-year Computer Science student
             who loves turning ideas into reality through <strong>creative MERN stack development</strong>.
@@ -115,6 +119,8 @@ function About({ setActivePage }) {
           </>
         )}
       </div>
+      <BackButton setActivePage={setActivePage} />
+
     </div>
   );
 }

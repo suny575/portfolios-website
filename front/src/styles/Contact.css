@@ -1,5 +1,5 @@
 .section-container {
-  padding-top: 80px; 
+  padding-top: 30px;
 }
 
 .contact-container {
@@ -27,9 +27,24 @@
   font-family: "Shadows Into Light", cursive;
   font-size: 2.2rem;
   color: #5a189a;
-  margin-bottom: 30px;
+  margin-bottom: 0.9px;
 }
 
+.contact_p {
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(32, 8, 102);
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tnx {
+  text-transform: uppercase;
+  color: red;
+  font-weight: bold;
+  font-family: cursive;
+  padding-top: 10px;
+}
 .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +67,7 @@
   margin-top: 25px;
   align-items: center;
   font-size: 1rem;
-  gap:18px;
+  gap: 18px;
 }
 
 .contact-right {

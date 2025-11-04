@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Projects.css';
 import { FaGithub, FaArrowDown } from 'react-icons/fa';
+import BackButton from "../components/BackButton";
 
 const projectsData = [
    {
@@ -48,7 +49,7 @@ const projectsData = [
   },
 ];
 
-function Projects() {
+function Projects({ setActivePage }) {
   const [expanded, setExpanded] = useState(null);
 
   const toggleDetails = (index) => {
@@ -56,6 +57,7 @@ function Projects() {
   };
 
   return (
+    <div className="section-container"> 
     <div className="projects-section">
       <h2 className="projects-title">My Projects 💜</h2>
        <p className="projects-intro">
@@ -84,6 +86,8 @@ function Projects() {
           </div>
         ))}
       </div>
+      <BackButton setActivePage={setActivePage} />
+    </div>
     </div>
   );
 }

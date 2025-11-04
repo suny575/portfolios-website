@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import '../styles/Skills.css';
 import { FaReact, FaNodeJs, FaDatabase, FaJs, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import BackButton from "../components/BackButton";
 
 const skills = [
   { key: 'html', icon: <FaHtml5 />, label: 'HTML5', highlight: '📄 Semantic Markup' },
@@ -27,7 +28,7 @@ function Skills({setActivePage}) {
   }, []);
 
   return (
-    <div> 
+    <div className='section-container'> 
    <div className="skills-section fade-in">
   <h2 className="skills-title">My Skills 💜</h2>
   <p className="skills-intro">
@@ -48,6 +49,7 @@ function Skills({setActivePage}) {
     <div className="skills-cta">
   <p>✨ Liked what you see? Let’s <span onClick={() => setActivePage('contact')}>get in touch!</span> 💌</p>
 </div>
+ <BackButton setActivePage={setActivePage} />
 </div>
     
   );

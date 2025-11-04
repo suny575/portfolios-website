@@ -1,79 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
-
-.node-map {
+.node-map-container {
   position: relative;
   width: 100%;
-  height: 90vh;
-
+  height: 300px;
+  margin:10px auto ;
+  padding: 0;
+  max-width: 800px;
   background: radial-gradient(
     circle at center,
     #f3e8ff 0%,
     #ede7f6 40%,
     #f9f7fc 100%
   );
+  border-radius: 20px;
   overflow: hidden;
-  animation: fadeIn 1.2s ease-in-out;
+  padding: 20px;
 }
 
 .node {
   position: absolute;
   text-align: center;
   cursor: pointer;
-  animation: float 6s ease-in-out infinite;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  animation: floatNode 4s ease-in-out infinite, fadeInNode 0.8s forwards;
+  opacity: 0;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .node:hover {
-  transform: scale(1.15);
-  filter: brightness(1.2);
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 0.7);
 }
 
 .icon {
-  font-size: 1.8rem; /* smaller size */
+  font-size: 2rem;
   color: white;
   background: linear-gradient(135deg, #8e44ad, #9b59b6);
   border-radius: 50%;
-  padding: 14px;
-  box-shadow: 0 0 18px rgba(167, 8, 236, 0.904);
-  transition: box-shadow 0.4s ease;
-}
-
-.node:hover .icon {
-  box-shadow: 0 0 25px rgba(155, 89, 182, 0.6);
+  padding: 12px;
+  box-shadow: 0 0 15px rgba(167, 8, 236, 0.7);
 }
 
 .label {
+  margin-top: 8px;
+  font-weight: 600;
   font-family: "Shadows Into Light", cursive;
   color: #000;
-  font-size: 1.15rem;
-  margin-top: 6px;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
 }
 
-/* Smooth float */
-@keyframes float {
-  0% {
+/* Node floating animation */
+@keyframes floatNode {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
     transform: translateY(-10px);
   }
-   75% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
-/* Page fade-in when loaded */
-@keyframes fadeIn {
-  from {
+/* Fade in */
+@keyframes fadeInNode {
+  0% {
     opacity: 0;
-    transform: scale(0.98);
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
