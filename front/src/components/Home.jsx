@@ -28,7 +28,7 @@ function Home({ setActivePage }) {
     return () => clearTimeout(timeout);
   }, [charIndex, roleIndex]);
 
-  const handleHireMe = () => {
+  const handleContactMe = () => {
     setActivePage('contact'); // Go to contact page
   };
 
@@ -96,10 +96,10 @@ const handleExplore = () => {
               Crafting professional, interactive, and delightful web experiences with a touch of creativity ✨
             </p>
             <div className="d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-md-start mt-3">
-              <Button variant="primary" onClick={handleHireMe}>
-                Hire Me
+              <Button className='btn btn1 ' onClick={handleContactMe}>
+                Contact Me
               </Button>
-              <Button variant="outline-primary" onClick={handleExplore}>
+              <Button className='btn btn2' onClick={handleExplore}>
                 Explore My Portfolio
               </Button>
             </div>
