@@ -7,6 +7,7 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  font-family: "Open sans";
   background: linear-gradient(180deg, #f8f5ff 0%, #ffffff 100%);
 }
 
@@ -49,7 +50,7 @@
   color: #333;
   font-weight: 500;
   margin-bottom: 10px;
-  font-family: "Shadows Into Light";
+  font-family: "Segeo UI",Roboto,"Helvetica Neue";
 }
 
 .highlight {

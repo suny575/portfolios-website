@@ -21,8 +21,8 @@
 
 .social-icon a:hover {
   color: #fff;
-  padding: 8px;
-  margin: 15px;
+  padding: 5px;
+  margin: 5px;
   border-radius: 50px;
   background-color: blue;
   transform: translateY(-8px) scale(1.15);
@@ -33,7 +33,7 @@
   color: #000;
   font-style: italic;
   font-size: medium;
-  font-family: "Shadows Into Light";
+  font-family: "Open sans";
 }
 
 .footer p:hover {

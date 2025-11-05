@@ -3,8 +3,6 @@ import "../styles/Projects.css";
 import { FaGithub, FaArrowDown } from "react-icons/fa";
 import BackButton from "../components/BackButton";
 
-
-
 const projectsData = [
   {
     name: "Portfolio Website",
@@ -12,7 +10,7 @@ const projectsData = [
       "My personal portfolio with interactive nodes, skills showcase, and projects.",
     tools: "React, CSS, Bootstrap",
     duration: "4 weeks",
-    link: "#",
+    link: "https://github.com/suny575/portfolios-website",
   },
   {
     name: "Background Remover",
@@ -20,7 +18,7 @@ const projectsData = [
       "A smart tool that removes image backgrounds automatically using AI techniques.",
     tools: "React, HTML, CSS, AI API",
     duration: "2 weeks",
-    link: "https://github.com/suny575/image-background-remover.git",
+    link: "https://github.com/suny575/image-background-remover",
   },
   {
     name: "Drag & Drop App",
@@ -28,7 +26,7 @@ const projectsData = [
       "Interactive drag and drop interface to organize items visually.",
     tools: "React, HTML, CSS, JavaScript",
     duration: "1 week",
-    link: "https://github.com/suny575/Drag_Drop.git",
+    link: "https://github.com/suny575/Drag_Drop",
   },
   {
     name: "Movie Site",
@@ -36,7 +34,7 @@ const projectsData = [
       "A fun movie browsing site showing trending movies with trailers and ratings.",
     tools: "React, TMDB API, CSS",
     duration: "3 weeks",
-    link: "https://github.com/suny575/Movie-Site.git",
+    link: "https://github.com/suny575/Movie-Site",
   },
   {
     name: "Task Manager App",
@@ -53,15 +51,14 @@ const projectsData = [
       "A real-time chat application using websockets for seamless instant messaging.",
     tools: "React, Node.js, Socket.IO",
     duration: "3 weeks",
-    link: "https://github.com/suny575/chat-app",
+    link: "https://github.com/suny575/chatt-app.git",
   },
 ];
 
 function Projects({ setActivePage }) {
-
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   const [expanded, setExpanded] = useState(null);
 

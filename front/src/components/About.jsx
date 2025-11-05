@@ -61,7 +61,7 @@ function About({ setActivePage }) {
       {/* TOP IMAGE + TEXT */}
       <div className="about-content section-container">
         <div className="about-image-container">
-          <img src="/me.png" className="about-image" />
+          <img src="/me3.png" className="about-image" />
           <FaLaptopCode className="floating-icon icon1"/>
           <FaPalette className="floating-icon icon2"/>
           <FaLightbulb className="floating-icon icon3"/>
