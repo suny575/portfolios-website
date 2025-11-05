@@ -4,6 +4,9 @@ import { FaLaptopCode, FaLightbulb, FaPalette, FaReact, FaNodeJs, FaDatabase, Fa
 import BackButton from "../components/BackButton";
 
 function About({ setActivePage }) {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const containerRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const [showMore, setShowMore] = useState(false);

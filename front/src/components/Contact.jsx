@@ -5,6 +5,9 @@ import "../styles/Contact.css";
 import BackButton from "../components/BackButton";
 
 function Contact({ setActivePage }) {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
   const containerRef = useRef(null);

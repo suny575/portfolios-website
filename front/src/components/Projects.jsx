@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Projects.css";
 import { FaGithub, FaArrowDown } from "react-icons/fa";
 import BackButton from "../components/BackButton";
+
+
 
 const projectsData = [
   {
@@ -34,7 +36,7 @@ const projectsData = [
       "A fun movie browsing site showing trending movies with trailers and ratings.",
     tools: "React, TMDB API, CSS",
     duration: "3 weeks",
-    link: "https://github.com/suny575/m_site.git",
+    link: "https://github.com/suny575/Movie-Site.git",
   },
   {
     name: "Task Manager App",
@@ -56,6 +58,11 @@ const projectsData = [
 ];
 
 function Projects({ setActivePage }) {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const [expanded, setExpanded] = useState(null);
 
   const toggleDetails = (index) => {
