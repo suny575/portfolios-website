@@ -16,7 +16,7 @@ const projectsData = [
     name: "Background Remover",
     description:
       "A smart tool that removes image backgrounds automatically using AI techniques.",
-    tools: "React, HTML, CSS, AI API",
+    tools: "HTML, CSS, Javascript,AI API",
     duration: "2 weeks",
     link: "https://github.com/suny575/image-background-remover",
   },
@@ -24,16 +24,16 @@ const projectsData = [
     name: "Drag & Drop App",
     description:
       "Interactive drag and drop interface to organize items visually.",
-    tools: "React, HTML, CSS, JavaScript",
-    duration: "1 week",
+    tools: "HTML, CSS, JavaScript",
+    duration: "5 Days",
     link: "https://github.com/suny575/Drag_Drop",
   },
   {
     name: "Movie Site",
     description:
       "A fun movie browsing site showing trending movies with trailers and ratings.",
-    tools: "React, TMDB API, CSS",
-    duration: "3 weeks",
+    tools: "HTML TMDB API, Javascript,CSS",
+    duration: "5 weeks",
     link: "https://github.com/suny575/Movie-Site",
   },
   {
@@ -49,7 +49,7 @@ const projectsData = [
     name: "Chat App",
     description:
       "A real-time chat application using websockets for seamless instant messaging.",
-    tools: "React, Node.js, Socket.IO",
+    tools: "React,Bootstrap, Node.js, Socket.IO",
     duration: "3 weeks",
     link: "https://github.com/suny575/chatt-app.git",
   },
