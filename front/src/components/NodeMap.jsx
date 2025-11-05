@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {
   FaUserAstronaut,
-  FaCode,
   FaProjectDiagram,
   FaEnvelopeOpenText,
   FaBrain,
-  FaHome,
 } from "react-icons/fa";
 import "../styles/NodeMap.css";
 

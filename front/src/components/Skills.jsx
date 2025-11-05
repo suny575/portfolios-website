@@ -60,7 +60,7 @@ function Skills({ setActivePage }) {
     window.scrollTo(0, 0);
   }, []);
   const containerRef = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

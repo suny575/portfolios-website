@@ -1,0 +1,21 @@
+{
+  "short_name": "Tsehay",
+  "name": "Tsehayinesh Belete | Portfolio",
+  "description": "The personal portfolio website of Tsehayinesh Belete — Computer Science student, web developer, and creative problem solver.",
+  "start_url": ".",
+  "display": "browser",
+  "theme_color": "#f5b7b1",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
