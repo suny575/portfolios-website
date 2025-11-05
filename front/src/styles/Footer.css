@@ -14,7 +14,7 @@
 }
 
 .social-icon a {
-  color: #8e44ad;
+  color: #af0af5;
   margin: 10px;
   font-size: 1.6rem;
 }
@@ -31,6 +31,13 @@
 
 .footer p {
   color: #000;
+  font-style: italic;
+  font-size: medium;
+  font-family: "Shadows Into Light";
+}
+
+.footer p:hover {
+  color: #0aaaf4;
   font-size: 1rem;
   padding: 5px;
   margin: 10px;

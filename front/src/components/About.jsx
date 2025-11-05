@@ -94,7 +94,7 @@ function About({ setActivePage }) {
       {/* CENTERED MORE BUTTON */}
       <div className="more-section-container">
         <p className="more-toggle" onClick={() => setShowMore(!showMore)}>
-          {showMore ? "− Hide More About Me" : "More +"}
+          {showMore ? "− Hide " : "More +"}
         </p>
 
         {showMore && (

@@ -1,6 +1,5 @@
-
 .section-container {
-  padding-top:  30px;
+  padding-top: 30px;
   margin-top: 10px;
 }
 /* ABOUT SECTION */
@@ -57,7 +56,7 @@
 }
 
 .about-image-container:hover::before {
-  filter: blur(30px);
+  filter: blur(20px);
   opacity: 1;
 }
 
@@ -75,11 +74,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: conic-gradient(from 0deg, #ab47bc, #7e57c2, #ce93d8, #ab47bc);
-  filter: blur(20px);
+  background: conic-gradient(
+    from 0deg,
+    hsl(291, 93%, 49%),
+    #ef07d8,
+    #eb0d83,
+    #ab47bc
+  );
+  filter: blur(10px);
   z-index: 1;
   animation: spin 6s linear infinite;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* Floating Icons around image */
@@ -126,6 +131,13 @@
   text-align: left;
 }
 
+.about-text p {
+  font-style: oblique;
+  font-size: large;
+  font-family: "Shadows Into Light";
+  text-align: justify;
+  text-shadow: 10px 15px 10px rgba(200, 39, 236, 0.5);
+}
 .about-title {
   font-family: "Pacifico", cursive;
   font-size: 2.5rem;
@@ -139,6 +151,7 @@
   gap: 25px;
   margin-top: 25px;
   flex-wrap: wrap;
+  font-family: "Shadows Into Light";
 }
 
 .skill-item {
@@ -260,8 +273,8 @@
 }
 
 .more-text p {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.95rem;
+  font-family: "Shadows Into Light";
+  font-size: 1rem;
   line-height: 1.5;
   color: #333;
 }

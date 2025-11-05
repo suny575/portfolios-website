@@ -24,8 +24,9 @@
 }
 
 .back-btn:hover {
+  padding-inline: 10px;
   transform: translateY(-3px) scale(1.05);
-  background: linear-gradient(135deg, #7e57c2, #ab47bc);
+  background: linear-gradient(135deg, #6219e0, #2a9df0);
   box-shadow: 0 8px 25px rgba(155, 89, 182, 0.6);
   animation: glowPulse 1.2s infinite alternate;
 }

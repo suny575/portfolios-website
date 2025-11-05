@@ -1,51 +1,57 @@
-import React, { useState } from 'react';
-import '../styles/Projects.css';
-import { FaGithub, FaArrowDown } from 'react-icons/fa';
+import React, { useState } from "react";
+import "../styles/Projects.css";
+import { FaGithub, FaArrowDown } from "react-icons/fa";
 import BackButton from "../components/BackButton";
 
 const projectsData = [
-   {
-    name: 'Portfolio Website',
-    description: 'My personal portfolio with interactive nodes, skills showcase, and projects.',
-    tools: 'React, CSS, Bootstrap',
-    duration: '4 weeks',
-    link: '#',
+  {
+    name: "Portfolio Website",
+    description:
+      "My personal portfolio with interactive nodes, skills showcase, and projects.",
+    tools: "React, CSS, Bootstrap",
+    duration: "4 weeks",
+    link: "#",
   },
   {
-    name: 'Background Remover',
-    description: 'A smart tool that removes image backgrounds automatically using AI techniques.',
-    tools: 'React, HTML, CSS, AI API',
-    duration: '2 weeks',
-    link: '#',
+    name: "Background Remover",
+    description:
+      "A smart tool that removes image backgrounds automatically using AI techniques.",
+    tools: "React, HTML, CSS, AI API",
+    duration: "2 weeks",
+    link: "https://github.com/suny575/image-background-remover.git",
   },
   {
-    name: 'Drag & Drop App',
-    description: 'Interactive drag and drop interface to organize items visually.',
-    tools: 'React, HTML, CSS, JavaScript',
-    duration: '1 week',
-    link: '#',
+    name: "Drag & Drop App",
+    description:
+      "Interactive drag and drop interface to organize items visually.",
+    tools: "React, HTML, CSS, JavaScript",
+    duration: "1 week",
+    link: "https://github.com/suny575/Drag_Drop.git",
   },
   {
-    name: 'Movie Site',
-    description: 'A fun movie browsing site showing trending movies with trailers and ratings.',
-    tools: 'React, TMDB API, CSS',
-    duration: '3 weeks',
-    link: '#',
+    name: "Movie Site",
+    description:
+      "A fun movie browsing site showing trending movies with trailers and ratings.",
+    tools: "React, TMDB API, CSS",
+    duration: "3 weeks",
+    link: "https://github.com/suny575/m_site.git",
   },
   {
     name: "Task Manager App",
-    description: "A full-stack MERN app to manage daily tasks efficiently with user-friendly interface.",
+    description:
+      "A full-stack MERN app to manage daily tasks efficiently with user-friendly interface.",
     tools: "MongoDB, Express, React, Node.js",
     duration: "1 month",
-    link: "https://github.com/suny575/task-manager"
+    link: "https://github.com/suny575/task-manager",
   },
 
   {
     name: "Chat App",
-    description: "A real-time chat application using websockets for seamless instant messaging.",
+    description:
+      "A real-time chat application using websockets for seamless instant messaging.",
     tools: "React, Node.js, Socket.IO",
     duration: "3 weeks",
-    link: "https://github.com/suny575/chat-app"
+    link: "https://github.com/suny575/chat-app",
   },
 ];
 
@@ -56,38 +62,46 @@ function Projects({ setActivePage }) {
     setExpanded(expanded === index ? null : index);
   };
 
+  const handleContactMe = () => setActivePage("contact");
   return (
-    <div className="section-container"> 
-    <div className="projects-section">
-      <h2 className="projects-title">My Projects 💜</h2>
-       <p className="projects-intro">
-        Throughout my journey as a 4th-year Computer Science student, I’ve explored, learned, 
-        and built amazing things. Here are some of the projects that reflect my growth, creativity, and problem-solving skills.
-      </p>
-      <div className="floating-arrow">⬇️</div>
-      <div className="projects-grid">
-        {projectsData.map((project, idx) => (
-          <div className="project-card" key={idx}>
-            <h3 className="project-name">{project.name}</h3>
-            <div className="project-short" onClick={() => toggleDetails(idx)}>
-              <FaArrowDown className='pointerD' /> Explore
-            </div>
-
-            {expanded === idx && (
-              <div className="project-details">
-                <p>📝 {project.description}</p>
-                <p>🛠️ Tools: {project.tools}</p>
-                <p>⏳ Duration: {project.duration}</p>
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  <FaGithub /> View Project
-                </a>
+    <div className="section-container">
+      <div className="projects-section">
+        <h2 className="projects-title">My Projects 💜</h2>
+        <p className="projects-intro">
+          Throughout my journey as a 4th-year Computer Science student, I’ve
+          explored, learned, and built amazing things. Here are some of the
+          projects that reflect my growth, creativity, and problem-solving
+          skills.
+        </p>
+        <div className="floating-arrow">⬇️</div>
+        <div className="projects-grid">
+          {projectsData.map((project, idx) => (
+            <div className="project-card" key={idx}>
+              <h3 className="project-name">{project.name}</h3>
+              <div className="project-short" onClick={() => toggleDetails(idx)}>
+                <FaArrowDown className="pointerD" /> Explore
               </div>
-            )}
-          </div>
-        ))}
+
+              {expanded === idx && (
+                <div className="project-details">
+                  <p>📝 {project.description}</p>
+                  <p>🛠️ Tools: {project.tools}</p>
+                  <p>⏳ Duration: {project.duration}</p>
+                  <a href={project.link} target="_blank" rel="noreferrer">
+                    <FaGithub /> View Project
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="d-flex flex-column flex-sm-row gap-4 justify-content-center mt-3">
+          <BackButton setActivePage={setActivePage} />
+          <button className="c-btn" onClick={handleContactMe}>
+            Contact Me
+          </button>
+        </div>
       </div>
-      <BackButton setActivePage={setActivePage} />
-    </div>
     </div>
   );
 }

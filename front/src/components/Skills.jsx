@@ -47,7 +47,7 @@ function Skills({setActivePage}) {
       </div>
     </div>
     <div className="skills-cta">
-  <p>✨ Liked what you see? Let’s <span onClick={() => setActivePage('contact')}>get in touch!</span> 💌</p>
+  <p>✨ Liked what you see? Let’s <span className='cont' onClick={() => setActivePage('contact')}>get in touch!</span> 💌</p>
 </div>
  <BackButton setActivePage={setActivePage} />
 </div>

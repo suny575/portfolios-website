@@ -42,8 +42,9 @@ function Contact({ setActivePage }) {
     >
       <h2 className="contact-title">Get in Touch 💜</h2>
 <div className="contact_p">.
-  <p>Feel Free to Contact me, Ask and Talk about <strong> projects </strong> let's build together,<br />
-   You can send me any <strong> feedback </strong>  or <strong> suggestion !.</strong>
+  <p>Let’s connect and collaborate! Whether you have a <strong> project</strong> idea, feedback,
+  <br /> or just want to talk tech-
+      <strong> I'd Love  </strong>  to hear from you!.
    <br /> <div className="tnx">Thanks❤️!</div> </p>
 </div>
       <div className="contact-content">

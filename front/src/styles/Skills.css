@@ -5,8 +5,8 @@
 
 
 .skills-section {
-  max-width: 900px; /* limits the width of the section */
-  margin: 30px auto; /* centers it horizontally and gives top/bottom spacing */
+  max-width: 900px; 
+  margin: 30px auto; 
   padding: 35px;
   text-align: center;
   background: rgba(225, 214, 214, 0.9);
@@ -170,4 +170,12 @@
 .skills-cta span:hover {
   color: #ab47bc;
   transform: scale(1.1);
+}
+
+.skills-cta .cont:hover{
+  color: #000;
+  font-family: cursive;
+  font-variant: small-caps;
+  font-weight: bold;
+
 }
