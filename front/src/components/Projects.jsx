@@ -51,7 +51,7 @@ const projectsData = [
       "A real-time chat application using websockets for seamless instant messaging.",
     tools: "React,Bootstrap, Node.js, Socket.IO",
     duration: "3 weeks",
-    link: "https://github.com/suny575/chatt-app.git",
+    link: "https://github.com/suny575/chatt-app",
   },
 ];
 
