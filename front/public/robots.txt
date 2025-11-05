@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolios-website-i6hh-hs1lc3j0o-sunys-projects-596255e9.vercel.app/sitemap.xml
