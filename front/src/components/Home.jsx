@@ -6,7 +6,7 @@ import Particles from 'react-tsparticles';
 import '../styles/Home.css';
 
 function Home({ setActivePage }) {
-  const roles = ['MERN Developer', 'Problem Solver', 'Creative Coder'];
+  const roles = ['MERN Stack Developer', 'Problem Solver', 'Creative Coder'];
   const [currentText, setCurrentText] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
