@@ -27,10 +27,12 @@ function NodeMap({ setActivePage }) {
         top = Math.random() * 60 + 20;
         left = Math.random() * 60 + 20;
         safe = true;
-        existingPositions.forEach((pos) => {
-          if (Math.abs(pos.top - top) < 12 && Math.abs(pos.left - left) < 12)
+        for (const pos of existingPositions) {
+          if (Math.abs(pos.top - top) < 12 && Math.abs(pos.left - left) < 12) {
             safe = false;
-        });
+            break;
+          }
+        }
       } while (!safe);
       return { top: `${top}%`, left: `${left}%` };
     };

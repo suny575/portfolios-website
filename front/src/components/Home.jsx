@@ -5,8 +5,9 @@ import { FaLaptopCode, FaStar, FaLightbulb, FaPalette } from 'react-icons/fa';
 import Particles from 'react-tsparticles';
 import '../styles/Home.css';
 
+const roles = ['MERN Stack Developer', 'Problem Solver', 'Creative Coder'];
+
 function Home({ setActivePage }) {
-  const roles = ['MERN Stack Developer', 'Problem Solver', 'Creative Coder'];
   const [currentText, setCurrentText] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

@@ -60,7 +60,7 @@ function Skills({ setActivePage }) {
     window.scrollTo(0, 0);
   }, []);
   const containerRef = useRef(null);
-  const [setVisible] = useState(false);
+  const [, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -70,7 +70,7 @@ function Skills({ setActivePage }) {
     );
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [setVisible]);
 
   return (
     <div className="section-container">
